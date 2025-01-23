@@ -1,0 +1,249 @@
+/* Base styles for the app */
+.App {
+  text-align: center; /* Centers text for elements within the app */
+}
+
+/* Navbar styles */
+.navbar11 {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Vertically centers items */
+  width: 90%; /* Sets the width of the navbar */
+  margin: 0 auto; /* Centers the navbar horizontally */
+}
+
+.logo-img {
+  height: 70px; /* Sets the height of the logo */
+}
+
+.nav {
+  display: flex; /* Horizontal layout for navigation links */
+  gap: 20px; /* Spacing between navigation links */
+}
+
+.nav a {
+  font-size: 19px; /* Font size for links */
+  margin-left: 20px; /* Spacing to the left of each link */
+  text-decoration: none; /* Removes underline from links */
+  color: #000; /* Default color for links */
+}
+
+.nav a:hover {
+  color: #aaa9a997; /* Changes link color on hover */
+}
+
+/* Hamburger menu styles (used for mobile navigation) */
+.hamburger {
+  display: none; /* Hidden by default (visible only on smaller screens) */
+  flex-direction: column; /* Stack bars vertically */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  background: none; /* Removes background styling */
+  border: none; /* Removes border styling */
+}
+
+.hamburger .bar {
+  width: 30px; /* Width of each bar */
+  height: 2.5px; /* Height of each bar */
+  background-color: #000; /* Bar color */
+  margin: 4px 0; /* Spacing between bars */
+}
+
+.hamburger .bar:nth-child(1) {
+  transform: rotate(45deg) translate(-0.05em, 1.25em); /* Rotates top bar */
+  transition: ease-out 0.5s; /* Smooth animation */
+}
+
+.hamburger .bar:nth-child(2) {
+  transform: scale(0); /* Hides the middle bar */
+  transition: ease-out 0.5s;
+}
+
+.hamburger .bar:nth-child(3) {
+  transform: rotate(135deg) translate(0.3em, 1em); /* Rotates bottom bar */
+  transition: ease-out 0.5s;
+}
+
+/* Unclicked hamburger (restores original state) */
+.hamburger .bar.unclicked {
+  transform: rotate(0) translate(0); /* Resets rotation and translation */
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+/* Responsive navbar styles for small screens */
+@media (max-width: 800px) {
+  .nav {
+    display: none; /* Hides navbar by default */
+    flex-direction: column; /* Stacks links vertically */
+    position: absolute; /* Positions dropdown menu */
+    top: 60px; /* Offset from top */
+    right: 0px; /* Aligns to the right */
+    background-color: #ffffff83; /* Semi-transparent background */
+    padding: 10px 20px 50px; /* Adds padding to dropdown */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow to dropdown */
+  }
+
+  .nav-open {
+    display: flex; /* Shows the navbar when open */
+  }
+
+  .hamburger {
+    display: flex; /* Displays the hamburger icon */
+  }
+}
+
+/* Main content section styles */
+.main {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.756),
+      rgba(252, 252, 162, 0.136)
+    ),
+    url("../src/Component/image/pexels-ky-h-48864292-29910892.jpg"); /* Gradient and background image */
+  background-size: cover; /* Scales the image to cover the container */
+  background-position: center; /* Centers the background image */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  align-items: center; /* Centers items vertically */
+}
+
+.main1 {
+  font-size: 20px; /* Font size for main section text */
+  font-weight: bold; /* Bold text */
+  color: #fff; /* White text color */
+  align-items: center; /* Centers text vertically */
+  margin-top: 50px; /* Top margin for spacing */
+}
+
+.link2 {
+  text-decoration: none; /* Removes underline */
+  color: #feeeae; /* Light yellow text */
+  background-color: #aaa9a94f; /* Semi-transparent background */
+  padding: 10px; /* Padding inside the link */
+  border-radius: 30px; /* Rounded corners */
+}
+
+.link2:hover {
+  background-color: #aaa9a997; /* Changes background color on hover */
+}
+
+/* About section styles */
+.about1 img {
+  width: 100%; /* Full width for images */
+}
+
+.about {
+  text-align: center; /* Centers content */
+}
+
+.about p {
+  font-size: 35px; /* Large font size */
+  font-weight: bold; /* Bold text */
+  margin: 150px 0 80px; /* Top and bottom spacing */
+}
+
+.about h1 {
+  margin-bottom: 80px; /* Bottom spacing */
+}
+
+.icon1 {
+  margin: 0 20px 40px; /* Left, right and bottom margin */
+}
+
+.icon1 .col1 {
+  border: solid; /* Adds a border */
+  border-radius: 15px; /* Rounds corners */
+  padding-top: 10px; /* Top padding */
+  margin-top: 20px; /* Top margin */
+}
+
+/* Experience section styles */
+.experience-title {
+  text-align: center; /* Centers text */
+  margin: 120px 0 80px; /* Spacing above and below */
+}
+
+.experience-title p {
+  font-size: 18px; /* Font size for paragraph */
+}
+
+.experience {
+  margin: 0 20px; /* Left and right margin */
+}
+
+.col2 {
+  border: solid; /* Adds a border */
+  border-radius: 15px; /* Rounds corners */
+  padding-top: 10px; /* Top padding */
+  margin-top: 20px; /* Top margin */
+}
+
+/* Contact section styles */
+.contact-container {
+  height: 100vh; /* Full viewport height */
+  align-items: center; /* Centers items vertically */
+  text-align: center; /* Centers text horizontally */
+}
+
+hr {
+  border: none; /* Removes border styling */
+  height: 3px; /* Thickness of the line */
+  background-color: #422c1c; /* Line color */
+  margin-bottom: 20px; /* Bottom margin */
+}
+
+.contact-inputs {
+  width: 400px; /* Input field width */
+  height: 50px; /* Input field height */
+  padding-left: 25px; /* Left padding */
+  color: #000; /* Text color */
+  border-radius: 30px; /* Rounds corners */
+  display: block; /* Block-level element */
+  margin-top: 20px; /* Top margin */
+  font-weight: 50px; /* Font-weight */
+}
+
+.contact-left textarea {
+  height: 140px; /* Height for textarea */
+  padding-top: 15px; /* Top padding */
+  border-radius: 20px; /* Rounds corners */
+}
+
+.form-btn {
+  padding: 0 40px; /* Horizontal padding */
+  background-color: #aaa9a94f; /* Button background color */
+  border-radius: 13px; /* Rounded corners */
+  margin: 20px 0 0 7px; /* Top and left margin */
+}
+
+.form-inputs {
+  width: 96%;
+  padding: 20px 0 20px 20px;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 15px; /* Rounds corners */
+  margin: 20px 0 0 7px; /* Top and left margin */
+}
+
+.form-btn:hover {
+  background-color: #6363638f; /* Changes background on hover */
+}
+
+/* Footer section styles */
+.footer-into {
+  text-align: center; /* Centers content */
+  margin: 120px 0 80px; /* Top and bottom margin */
+}
+
+.footer-into p {
+  font-size: 18px;
+}
+
+.footer-social {
+  display: flex; /* Flex layout for social icons */
+  justify-content: space-evenly; /* Even spacing between icons */
+  margin: 300px 40px 0; /* Top, left, and right margin */
+}
+
+.to-up {
+  text-align: end; /* Aligns text to the right */
+  margin: 20px 20px 30px 0; /* Spacing around the element */
+}
