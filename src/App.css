@@ -212,6 +212,7 @@ hr {
   background-color: #aaa9a94f; /* Button background color */
   border-radius: 13px; /* Rounded corners */
   margin: 20px 0 0 7px; /* Top and left margin */
+  color: #000;
 }
 
 .form-inputs {
